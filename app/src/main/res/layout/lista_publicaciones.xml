@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/Imagen"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alingParentLeft="true"
+                android:layout_alingParentTop="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/ambiente"></ImageView>
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alingParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRighOf="@+id/descripcion"
+                android:text="Descripcion"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+            <!--<TextView
+                 android:id="@+id/descripcion"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Descripcion"
+                 android:textSize="20dp"
+                 android:textStyle="bold"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginStart="10dp"
+                 android:layout_alingParentTop="true"
+                 android:layout_toRighOf="@+id/descripcion">
+             </TextView>-->
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
