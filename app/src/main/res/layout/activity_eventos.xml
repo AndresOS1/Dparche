@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/fondo2"
+    android:layout_height="match_parent"
+    tools:context=".Eventos">
+
+    <TextView
+        android:id="@+id/titulo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Eventos proximos"
+        android:textColor="@color/azull"
+        android:textSize="30dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <TextView
+        android:id="@+id/textcampanario"
+        android:layout_width="213dp"
+        android:layout_height="21dp"
+        android:fontFamily="monospace"
+        android:text="Campanario inaguracion de toto"
+        android:textColorHint="@color/black"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <ImageView
+        android:id="@+id/imagecampanario"
+        android:layout_width="215dp"
+        android:layout_height="175dp"
+        app:srcCompat="@drawable/tottoo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <TextView
+        android:id="@+id/textccentro"
+        android:layout_width="283dp"
+        android:layout_height="18dp"
+        android:fontFamily="monospace"
+        android:text="Centro de popayan artesanias"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <ImageView
+        android:id="@+id/imagecentro"
+        android:layout_width="215dp"
+        android:layout_height="175dp"
+        app:srcCompat="@drawable/artesania"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+    <TextView
+        android:id="@+id/textcarnavales"
+        android:layout_width="347dp"
+        android:layout_height="18dp"
+        android:fontFamily="monospace"
+        android:text="Alfonzo lopez carnavales de pubenza"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="489dp" />
+
+    <ImageView
+        android:id="@+id/imagecarnavales"
+        android:layout_width="215dp"
+        android:layout_height="175dp"
+        app:srcCompat="@drawable/pubenza"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="524dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

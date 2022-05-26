@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.deplegable.ui.home.HomeFragment"
+        android:label="@string/menu_restaurantes"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_bar"
+        android:name="com.example.deplegable.ui.gallery.GalleryFragment"
+        android:label="@string/menu_bares"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_disco"
+        android:name="com.example.deplegable.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_disco"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_cul"
+        android:name="com.example.deplegable.ui.Cultura.CulturaFragment"
+        android:label="@string/menu_cul"
+        tools:layout="@layout/fragment_cultura" />
+
+    <fragment
+        android:id="@+id/nav_recre"
+        android:name="com.example.deplegable.ui.Recreacion.RecreacionFragment"
+        android:label="@string/menu_recre"
+        tools:layout="@layout/fragment_recre" />
+
+    <fragment
+        android:id="@+id/nav_motel"
+        android:name="com.example.deplegable.ui.Moteles.MotelFragment"
+        android:label="@string/menu_motel"
+        tools:layout="@layout/fragment_motel" />
+</navigation>
