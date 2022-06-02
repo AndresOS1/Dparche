@@ -10,6 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DEPLEGABLE">
         <activity
+            android:name=".Publicacion"
+            android:exported="false"
+             />
+        <activity
+            android:name=".Glidedd"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

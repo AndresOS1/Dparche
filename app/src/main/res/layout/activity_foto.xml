@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Publicacion">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="URL"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        android:fontFamily="sans-serif-smallcaps"
+        >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imagenURL"
+        android:layout_width="356dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/Cargar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="subir"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            >
+        </Button>
+
+        <Button
+            android:id="@+id/Enviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="ENVIAR"
+            android:textColor="@color/black"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            >
+
+        </Button>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Urlimagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="URL"
+        android:textSize="25sp">
+    </TextView>
+    <Button
+        android:id="@+id/descargar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="PUBLICAR"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@color/black"
+        >
+    </Button>
+</LinearLayout>
