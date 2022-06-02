@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "125850645239",
+    "firebase_url": "https://storagefinal-b48f2-default-rtdb.firebaseio.com",
+    "project_id": "storagefinal-b48f2",
+    "storage_bucket": "storagefinal-b48f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125850645239:android:f32671178aa75c4d0a99f2",
+        "android_client_info": {
+          "package_name": "com.example.administrador"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125850645239-l2cvkkv50364tvva062qnbidbc070rf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx20Q1u_TbVVvqPM_OSIuotS84qS0dbXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125850645239-l2cvkkv50364tvva062qnbidbc070rf6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125850645239:android:ec67bd9029418e6e0a99f2",
+        "android_client_info": {
+          "package_name": "com.example.deplegable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125850645239-l2cvkkv50364tvva062qnbidbc070rf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx20Q1u_TbVVvqPM_OSIuotS84qS0dbXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125850645239-l2cvkkv50364tvva062qnbidbc070rf6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125850645239:android:193f1da4f8c77f5e0a99f2",
+        "android_client_info": {
+          "package_name": "com.example.storagefinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125850645239-l2cvkkv50364tvva062qnbidbc070rf6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCx20Q1u_TbVVvqPM_OSIuotS84qS0dbXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125850645239-l2cvkkv50364tvva062qnbidbc070rf6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
