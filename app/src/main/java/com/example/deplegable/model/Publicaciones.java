@@ -7,13 +7,12 @@ public class Publicaciones {
     private int foto;
     private String descripcion;
     private String ubicacion;
-    private String categoria;
 
-    public Publicaciones(int foto, String descripcion, String ubicacion, String categoria) {
+    public Publicaciones(int foto, String descripcion, String ubicacion) {
         this.foto = foto;
         this.descripcion = descripcion;
         this.ubicacion = ubicacion;
-        this.categoria = categoria;
+
     }
 
     public int getFoto() {
@@ -40,16 +39,8 @@ public class Publicaciones {
         this.ubicacion = ubicacion;
     }
 
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
     @Override
     public String toString() {
-        return  foto + ' ' + descripcion + ' ' + ubicacion + ' ' + categoria ;
+        return  foto + ' ' + descripcion + ' ' + ubicacion ;
     }
 }

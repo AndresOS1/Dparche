@@ -22,8 +22,6 @@
                 android:id="@+id/Imagen"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_alingParentLeft="true"
-                android:layout_alingParentTop="true"
                 android:layout_marginRight="16dp"
                 android:src="@drawable/ambiente"></ImageView>
 
@@ -37,10 +35,8 @@
                     android:id="@+id/descripcion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alingParentTop="true"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_toRighOf="@+id/descripcion"
                     android:text="Descripcion"
                     android:textSize="20dp"
                     android:textStyle="bold"></TextView>
@@ -49,25 +45,22 @@
                     android:id="@+id/ubicacion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alingParentTop="true"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_toRighOf="@+id/ubicacion"
-                    android:text="Ubicacion"
                     android:layout_marginTop="10dp"
+                    android:text="Ubicacion"
                     android:textSize="20dp"
                     android:textStyle="bold"></TextView>
 
                 <Spinner
+                    android:id="@+id/edtCategoria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="casual"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="20dp"
-                    android:id="@+id/edtCategoria"
-                    android:textColorHint="@color/black"
-                    android:layout_marginLeft="5dp">
-                </Spinner>
+                    android:fontFamily="casual"
+                    android:textColorHint="@color/black"></Spinner>
 
             </LinearLayout>
 
