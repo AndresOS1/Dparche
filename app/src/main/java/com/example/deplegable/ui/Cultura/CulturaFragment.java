@@ -46,13 +46,13 @@ public class CulturaFragment extends Fragment {
 
         listaPubli = new ArrayList<>();
         //cargar la lista
-       /* cargarLista();*/
+       cargarLista();
         //mostrar datos
         mostrarDatos();
 
         return view;
     }
-    /*public View onCreateView(@NonNull LayoutInflater inflater,
+    public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         CulturaViewModel culturaViewModel =
                 new ViewModelProvider(this).get(CulturaViewModel.class);
@@ -63,29 +63,24 @@ public class CulturaFragment extends Fragment {
         final TextView textView = binding.textcultura;
         culturaViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
-    }*/
+    }
     public void cargarLista(){
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-        Query query = db.collection("Localizacion");
-
-        Adaptador<Locati> adaptador = new Adaptador.Builder<Locati>().setQuery(query, Locati.class).build));
-
         db.collection("Localizacion").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()){
                     for (QueryDocumentSnapshot document: task.getResult()){
                         Log.d(TAG, document.getId() + "=>" + document.getData());
-                        /*String adapter = document.getData().toString();
-                        arrayList.add(adapter);
-                        arrayAdapter.notifyDataSetChanged();*/
-                        listaPubli.add(document.getData().toString());
+                        String adapter = document.getData().toString();
+                        listaPubli.add(adapter);
+                        adaptador.notifyDataSetChanged();
                     }
                 }
             }
         });
+
     }
 
     public void mostrarDatos(){
