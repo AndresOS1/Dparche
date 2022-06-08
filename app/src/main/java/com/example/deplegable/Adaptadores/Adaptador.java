@@ -48,8 +48,11 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> implem
         double latitud = model.get(position).getLatitud();
         double longitud = model.get(position).getLongitud();
         NumberFormat nm = NumberFormat.getNumberInstance();
+
         holder.latitud.setText(nm.format(latitud));
         holder.longitud.setText(nm.format(longitud));
+
+
     }
 
     @Override

@@ -38,6 +38,7 @@ public class CulturaFragment extends Fragment {
     Adaptador adaptador;
     RecyclerView recyclerViewCul;
     ArrayList<Locati> listaPubli;
+    double adap;
 
     @NonNull
     @Override
@@ -75,7 +76,11 @@ public class CulturaFragment extends Fragment {
                     for (QueryDocumentSnapshot document: task.getResult()){
                         Log.d(TAG, document.getId() + "=>" + document.getData());
                         String adapter = document.getData().toString();
-                        double adap = Double.parseDouble(adapter);
+                        try {
+                            adap = Double.parseDouble(adapter);
+                        }catch (NumberFormatException e) {
+
+                        }
                         Locati locati = new Locati();
                         locati.setLatitud(adap);
                         locati.setLongitud(adap);
