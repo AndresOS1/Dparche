@@ -5,6 +5,9 @@ public class Locati {
     private Double Latitud;
     private Double Longitud;
 
+    public Locati() {
+    }
+
     public Locati(Double latitud, Double longitud) {
         Latitud = latitud;
         Longitud = longitud;

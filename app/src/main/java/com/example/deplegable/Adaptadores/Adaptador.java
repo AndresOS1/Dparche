@@ -44,6 +44,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> implem
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
         double latitud = model.get(position).getLatitud();
         double longitud = model.get(position).getLongitud();
         NumberFormat nm = NumberFormat.getNumberInstance();

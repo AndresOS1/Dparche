@@ -30,6 +30,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class CulturaFragment extends Fragment {
@@ -52,7 +53,7 @@ public class CulturaFragment extends Fragment {
 
         return view;
     }
-    public View onCreateView(@NonNull LayoutInflater inflater,
+    /*public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         CulturaViewModel culturaViewModel =
                 new ViewModelProvider(this).get(CulturaViewModel.class);
@@ -63,7 +64,7 @@ public class CulturaFragment extends Fragment {
         final TextView textView = binding.textcultura;
         culturaViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
-    }
+    }*/
     public void cargarLista(){
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -74,13 +75,16 @@ public class CulturaFragment extends Fragment {
                     for (QueryDocumentSnapshot document: task.getResult()){
                         Log.d(TAG, document.getId() + "=>" + document.getData());
                         String adapter = document.getData().toString();
-                        listaPubli.add(adapter);
+                        double adap = Double.parseDouble(adapter);
+                        Locati locati = new Locati();
+                        locati.setLatitud(adap);
+                        locati.setLongitud(adap);
+                        listaPubli.add(locati);
                         adaptador.notifyDataSetChanged();
                     }
                 }
             }
         });
-
     }
 
     public void mostrarDatos(){
