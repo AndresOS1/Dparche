@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/imgfondo"
     tools:context=".Publicacion">
 
     <TextView
@@ -12,9 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="URL"
+        android:text="GESTION DE FOTOGRAFIA"
         android:textColor="@android:color/black"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:fontFamily="sans-serif-smallcaps"
         >
     </TextView>
@@ -38,9 +39,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="subir"
-            android:backgroundTint="@color/black"
-            android:textColor="@color/white"
+            android:text="SUBIR DE GALERIA"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:textColor="@color/black"
             >
         </Button>
 
@@ -50,12 +51,23 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="ENVIAR"
+            android:text="ENVIAR A BD"
             android:textColor="@color/black"
             android:backgroundTint="@android:color/holo_orange_dark"
             >
 
         </Button>
+<!--        <ImageButton-->
+<!--            android:id="@+id/imgbtnUno"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/camara"-->
+<!--            android:layout_marginTop="20dp"-->
+
+<!--            >-->
+<!--        </ImageButton>-->
+
+
     </LinearLayout>
 
     <TextView

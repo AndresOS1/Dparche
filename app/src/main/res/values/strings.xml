@@ -16,6 +16,7 @@
     <string name="menu_disco">Discotecas</string>
     <string name="menu_restaurantes">Restaurantes</string>
     <string name="menu_bares">Bares</string>
+    <string name="title_activity_mapa_ubi">MapaUbi</string>
 
 
 </resources>

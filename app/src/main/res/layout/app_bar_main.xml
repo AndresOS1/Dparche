@@ -30,6 +30,8 @@
         android:layout_marginTop="600dp"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@drawable/agregar" />
+        app:srcCompat="@drawable/agregar"
+        android:backgroundTint="@color/azull"
+        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

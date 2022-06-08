@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(MainActivity.this, Publicacion.class);
-        startActivityForResult(intent.createChooser(intent,"Seleccione la aplicacion"),10);
+        startActivityForResult(intent.createChooser(intent,"Seleccione la aplicacion"),0);
 
     }
 });
