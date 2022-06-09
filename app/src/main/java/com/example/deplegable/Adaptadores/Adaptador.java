@@ -1,6 +1,6 @@
 package com.example.deplegable.Adaptadores;
 
-import android.content.Context;
+/*import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,71 +14,77 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.deplegable.R;
 import com.example.deplegable.model.Locati;
 import com.example.deplegable.model.Publicaciones;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 
 import java.text.NumberFormat;
-import java.util.ArrayList;
+import java.util.ArrayList;*/
 
-public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> implements View.OnClickListener {
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
-    LayoutInflater inflater;
-    ArrayList<Locati> model;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-    //listener
-    private View.OnClickListener listener;
+import com.example.deplegable.R;
+import com.example.deplegable.model.Locati;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
-    public Adaptador(Context context, ArrayList<Locati> model){
-        this.inflater = LayoutInflater.from(context);
-        this.model = model;
+public class Adaptador extends FirestoreRecyclerAdapter<Locati, Adaptador.ViewHolder> {
+
+    /**
+     * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link
+     * FirestoreRecyclerOptions} for configuration options.
+     *
+     * @param options
+     */
+    public Adaptador(@NonNull FirestoreRecyclerOptions<Locati> options) {
+        super(options);
     }
+
+    @Override
+    protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Locati model) {
+        holder.lati.setText("" + model.getLatitud());
+        holder.longi.setText("" + model.getLongitud());
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.lista_publicaciones, parent, false);
-        view.setOnClickListener(this);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.lista_publicaciones, parent , false);
         return new ViewHolder(view);
     }
 
-    public void setOnClickListener(View.OnClickListener listener){
-        this.listener = listener;
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
-        double latitud = model.get(position).getLatitud();
-        double longitud = model.get(position).getLongitud();
-        NumberFormat nm = NumberFormat.getNumberInstance();
-
-        holder.latitud.setText(nm.format(latitud));
-        holder.longitud.setText(nm.format(longitud));
-
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return model.size();
-    }
-
-    @Override
-    public void onClick(View v) {
-        if (listener!=null){
-            listener.onClick(v);
-        }
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView latitud, longitud;
-
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView lati, longi;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            latitud = itemView.findViewById(R.id.latitud);
-            longitud = itemView.findViewById(R.id.longitud);
-
-
+            lati = (itemView).findViewById(R.id.latitud);
+            longi = (itemView).findViewById(R.id.longitud);
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*

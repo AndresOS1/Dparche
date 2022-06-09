@@ -23,6 +23,8 @@ import com.example.deplegable.databinding.FragmentGalleryBinding;
 import com.example.deplegable.model.Locati;
 import com.example.deplegable.model.Publicaciones;
 import com.example.deplegable.ui.gallery.GalleryViewModel;
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -38,22 +40,37 @@ public class CulturaFragment extends Fragment {
     Adaptador adaptador;
     RecyclerView recyclerViewCul;
     ArrayList<Locati> listaPubli;
-    double adap;
+    FirebaseFirestore db;
 
     @NonNull
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_cultura, container, false);
+        db = FirebaseFirestore.getInstance();
         recyclerViewCul = view.findViewById(R.id.recyclerView);
+        recyclerViewCul.setLayoutManager(new LinearLayoutManager(getContext()));
+        Query query = db.collection("Localizacion");
 
-        listaPubli = new ArrayList<>();
-        //cargar la lista
-       cargarLista();
-        //mostrar datos
-        mostrarDatos();
+        FirestoreRecyclerOptions<Locati> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Locati>().setQuery(query, Locati.class).build();
 
+        adaptador =  new Adaptador(firestoreRecyclerOptions);
+        adaptador.notifyDataSetChanged();
+        recyclerViewCul.setAdapter(adaptador);
         return view;
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        adaptador.startListening();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        adaptador.stopListening();
+    }
+}
     /*public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         CulturaViewModel culturaViewModel =
@@ -66,7 +83,7 @@ public class CulturaFragment extends Fragment {
         culturaViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }*/
-    public void cargarLista(){
+    /*public void cargarLista(){
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Localizacion").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -97,14 +114,14 @@ public class CulturaFragment extends Fragment {
         adaptador = new Adaptador(getContext(), listaPubli);
         recyclerViewCul.setAdapter(adaptador);
     }
-
+*/
     /*@Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
     }*/
 
-}
+
 
 
 
