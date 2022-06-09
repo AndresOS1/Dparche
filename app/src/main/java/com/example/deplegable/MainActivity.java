@@ -1,27 +1,28 @@
 package com.example.deplegable;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
+import android.view.View;
 
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.deplegable.databinding.ActivityMainBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     ClipData.Item perfil, salir;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +38,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Snackbar.make(view, "Añadir publicacion nueva", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            fab=findViewById(R.id.fab);
+            fab.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(MainActivity.this, Publicacion.class);
+        startActivityForResult(intent.createChooser(intent,"Seleccione la aplicacion"),0);
+
+    }
+});
+                /*Snackbar.make(view, "Añadir publicacion nueva", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();*/
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
