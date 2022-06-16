@@ -59,66 +59,66 @@
 
         </LinearLayout>
 
-<!--
+        <!--
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/Imagen"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginRight="16dp"
-                android:src="@drawable/ambiente"></ImageView>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:padding="10dp">
 
-                <TextView
-                    android:id="@+id/descripcion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:text="Descripcion"
-                    android:textSize="20dp"
-                    android:textStyle="bold"></TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/ubicacion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Ubicacion"
-                    android:textSize="20dp"
-                    android:textStyle="bold"></TextView>
+                    <ImageView
+                        android:id="@+id/Imagen"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/ambiente"></ImageView>
 
-                <Spinner
-                    android:id="@+id/edtCategoria"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="casual"
-                    android:textColorHint="@color/black"></Spinner>
 
-            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-        </LinearLayout>
+                        <TextView
+                            android:id="@+id/descripcion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="Descripcion"
+                            android:textSize="20dp"
+                            android:textStyle="bold"></TextView>
 
--->
+                        <TextView
+                            android:id="@+id/ubicacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Ubicacion"
+                            android:textSize="20dp"
+                            android:textStyle="bold"></TextView>
+
+                        <Spinner
+                            android:id="@+id/edtCategoria"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="casual"
+                            android:textColorHint="@color/black"></Spinner>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+        -->
 
 
     </RelativeLayout>

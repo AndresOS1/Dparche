@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProject/Dparche/app/src/main/res/layout/fragment_cultura.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProject/Dparche/app/src/main/res/layout/activity_emojis.xml" value="0.3161231884057971" />
+        <entry key="..\:/AndroidStudioProject/Dparche/app/src/main/res/layout/activity_entrada.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProject/Dparche/app/src/main/res/layout/activity_eventos.xml" value="0.3161231884057971" />
+        <entry key="..\:/AndroidStudioProject/Dparche/app/src/main/res/layout/activity_main.xml" value="0.3161231884057971" />
+        <entry key="..\:/AndroidStudioProject/Dparche/app/src/main/res/layout/app_bar_main.xml" value="0.3161231884057971" />
+        <entry key="..\:/AndroidStudioProject/Dparche/app/src/main/res/layout/content_main.xml" value="0.3161231884057971" />
+        <entry key="..\:/AndroidStudioProject/Dparche/app/src/main/res/layout/fragment_cultura.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProject/Dparche/app/src/main/res/layout/fragment_disco.xml" value="0.18085106382978725" />
         <entry key="..\:/AndroidStudioProject/Dparche/app/src/main/res/layout/fragment_gallery.xml" value="0.2341485507246377" />
         <entry key="..\:/AndroidStudioProject/Dparche/app/src/main/res/layout/fragment_home.xml" value="0.18085106382978725" />

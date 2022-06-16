@@ -31,6 +31,8 @@ import com.example.deplegable.R;
 import com.example.deplegable.model.Locati;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
 public class Adaptador extends FirestoreRecyclerAdapter<Locati, Adaptador.ViewHolder> {
 
