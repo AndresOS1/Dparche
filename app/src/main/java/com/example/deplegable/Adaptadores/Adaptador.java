@@ -22,19 +22,25 @@ import java.util.ArrayList;*/
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.deplegable.R;
 import com.example.deplegable.model.Locati;
+import com.example.deplegable.model.Publicaciones;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-public class Adaptador extends FirestoreRecyclerAdapter<Locati, Adaptador.ViewHolder> {
+import io.grpc.Context;
+
+public class Adaptador extends FirestoreRecyclerAdapter<Publicaciones, Adaptador.ViewHolder> {
+
 
     /**
      * Create a new RecyclerView adapter that listens to a Firestore Query.  See {@link
@@ -42,14 +48,18 @@ public class Adaptador extends FirestoreRecyclerAdapter<Locati, Adaptador.ViewHo
      *
      * @param options
      */
-    public Adaptador(@NonNull FirestoreRecyclerOptions<Locati> options) {
+    public Adaptador(@NonNull  FirestoreRecyclerOptions<Publicaciones> options) {
+
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Locati model) {
-        holder.lati.setText("" + model.getLatitud());
-        holder.longi.setText("" + model.getLongitud());
+    protected void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull Publicaciones model) {
+        holder.txtFecha.setText("" + model.getFecha());
+        holder.descripcion.setText("" + model.getOpinion());
+        holder.ubicacion.setText("" + model.getUbicacion());
+
+
     }
 
     @NonNull
@@ -60,11 +70,19 @@ public class Adaptador extends FirestoreRecyclerAdapter<Locati, Adaptador.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView lati, longi;
+        TextView nomUsuario, txtFecha, descripcion, ubicacion;
+        ImageView perfil, publicacion;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            lati = (itemView).findViewById(R.id.latitud);
-            longi = (itemView).findViewById(R.id.longitud);
+            nomUsuario = (itemView).findViewById(R.id.nomUsuario);
+            txtFecha = (itemView).findViewById(R.id.txtFecha);
+            descripcion = (itemView).findViewById(R.id.descripcion);
+            ubicacion = (itemView).findViewById(R.id.ubicacion);
+
+           perfil = (itemView).findViewById(R.id.imgPerfil);
+           publicacion = (itemView).findViewById(R.id.imgPublicacion);
+
         }
     }
 }

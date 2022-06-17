@@ -8,17 +8,15 @@ public class Publicaciones {
     private String opinion;
     private Date Fecha;
     private Double Ubicacion;
-    private String NombreLugar;
 
     public Publicaciones() {
     }
 
-    public Publicaciones(String imagen, String opinion, Date fecha, Double ubicacion, String nombreLugar) {
+    public Publicaciones(String imagen, String opinion, Date fecha, Double ubicacion) {
         this.imagen = imagen;
         this.opinion = opinion;
         Fecha = fecha;
         Ubicacion = ubicacion;
-        NombreLugar = nombreLugar;
     }
 
     public String getImagen() {
@@ -53,16 +51,9 @@ public class Publicaciones {
         Ubicacion = ubicacion;
     }
 
-    public String getNombreLugar() {
-        return NombreLugar;
-    }
-
-    public void setNombreLugar(String nombreLugar) {
-        NombreLugar = nombreLugar;
-    }
 
     @Override
     public String toString() {
-        return  imagen + ' ' + opinion + ' ' + Fecha + ' ' + Ubicacion + ' ' + NombreLugar;
+        return  imagen + ' ' + opinion + ' ' + Fecha + ' ' + Ubicacion ;
     }
 }
